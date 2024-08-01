@@ -1,0 +1,21 @@
+.box {
+    width: 6px;
+    height: 6px;
+    /*background-color: white;*/
+}
+
+.filled {
+    background-color: black;
+}
+
+#sandrea {
+    /*background-color: black;*/
+    /*padding: 1px;*/
+    /*gap: 1px;*/
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: black solid 1px;
+}
