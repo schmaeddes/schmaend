@@ -88,6 +88,7 @@ function processPixels() {
 
             if (nextPixel === false) {
                 actionArray[i].falling = false
+                actionArray[i].changeColorOfLowerPixels(1)
                 continue
             }
 
@@ -97,6 +98,7 @@ function processPixels() {
 
             if (nextPixel === false) {
                 actionArray[i].falling = false
+                actionArray[i].changeColorOfLowerPixels(1)
                 continue
             }
 

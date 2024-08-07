@@ -12,14 +12,14 @@ class Pixel {
 
     setFilled() {
         this.filled = true
-        this.docElement.style.backgroundColor = this.material.color
+        this.docElement.style.backgroundColor = this.material.getColor(0)
     }
 
     reset() {
         this.falling = false
         this.material = air
         this.filled = false
-        this.docElement.style.backgroundColor = this.material.color
+        this.docElement.style.backgroundColor = this.material.getColor(0)
     }
 
     getLeft() {
@@ -46,5 +46,20 @@ class Pixel {
         return {row: this.position.row + 1, column: this.position.column + 1}
     }
 
+    changeColorOfLowerPixels(layer) {
 
+        this.docElement.style.backgroundColor = this.material.getColor(layer)
+        if (this.position.row === gridSize - 1) {
+            return
+        }
+        layer++
+        let nextPixel = gridMatrix.getPixelByPosition(this.getBot())
+        if (nextPixel === undefined) {
+            return
+        }
+
+        if (nextPixel.filled) {
+            nextPixel.changeColorOfLowerPixels(layer)
+        }
+    }
 }

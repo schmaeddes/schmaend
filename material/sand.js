@@ -2,7 +2,7 @@ class Sand extends Material {
 
     constructor(name) {
         super(name);
-        this.color = "hsl(44, 100%, 50%)"
+        this.color = [44, 100, 85]
     }
 
     getNextPixel(pixel, gridMatrix) {

@@ -2,7 +2,7 @@ class Water extends Material {
 
     constructor(name) {
         super(name);
-        this.color = "hsl(200, 100%, 80%)"
+        this.color = [200, 100, 80]
     }
 
     getNextPixel(pixel, gridMatrix) {
